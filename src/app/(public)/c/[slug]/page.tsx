@@ -3,6 +3,11 @@ import { notFound } from "next/navigation";
 import { getCollegeBySlug, collegeLabel } from "@/data/colleges";
 import { listPublishedPostsForCollege } from "@/server/services/posts";
 import { formatDate } from "@/lib/utils";
+import CollegeSubnav from "@/components/public/college/CollegeSubnav";
+import CollegeHero from "@/components/public/college/CollegeHero";
+import CollegeSection from "@/components/public/college/CollegeSection";
+import Footer from "@/components/public/Footer";
+import type { CollegeNavIcon } from "@/components/public/college/CollegeSubnav";
 
 export default async function CollegePage({
   params,
@@ -16,42 +21,48 @@ export default async function CollegePage({
   // College id === slug in site.json.
   const posts = await listPublishedPostsForCollege(college.id, { limit: 12 });
 
+  const navItems: { id: string; label: string; icon: CollegeNavIcon }[] = [
+    { id: "overview", label: "Overview", icon: "book" },
+    { id: "programs", label: "Programs", icon: "graduation" },
+    { id: "news", label: "News", icon: "news" },
+    { id: "contact", label: "Contact", icon: "phone" },
+  ];
+
   return (
     <>
-      {/* College banner with brand color */}
-      <div
-        className="border-b border-neutral-200"
-        style={{ background: college.brandColor, color: "white" }}
-      >
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          <div className="flex items-center gap-4">
-            <div
-              aria-hidden
-              className="flex h-14 w-14 items-center justify-center rounded-md bg-white/15 text-sm font-bold"
-            >
+      <CollegeHero
+        name={college.name}
+        description={college.description}
+        brandColor={college.brandColor}
+        logoSrc="/auf-logo-mark.png"
+      />
+
+      <CollegeSubnav items={navItems} brandColor={college.brandColor} />
+
+      <div className="mx-auto max-w-6xl px-6 py-12">
+        <CollegeSection
+          id="overview"
+          title="College Overview"
+          subtitle="Programs, leadership, and academic focus."
+          icon="target"
+        >
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
               {college.shortName}
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-wider opacity-80">
-                A college of Angeles University Foundation
-              </div>
-              <h1 className="text-2xl font-semibold sm:text-3xl">{college.name}</h1>
-            </div>
+            <p className="mt-3 text-sm text-slate-600 sm:text-base">
+              {college.description}
+            </p>
           </div>
-          <p className="mt-4 max-w-3xl text-sm opacity-90">{college.description}</p>
-        </div>
-      </div>
+        </CollegeSection>
 
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        {/* Programs */}
         {college.programs.length > 0 ? (
-          <section className="mb-10">
-            <h2 className="mb-3 text-lg font-semibold text-neutral-900">Programs</h2>
+          <CollegeSection id="programs" title="Programs" icon="graduation">
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {college.programs.map((d) => (
                 <div
                   key={d.id}
-                  className="rounded-lg border border-neutral-200 bg-white p-4"
+                  className="rounded-2xl border border-neutral-200 bg-white p-4"
                 >
                   <div className="text-sm font-semibold text-neutral-900">{d.name}</div>
                   {d.headName ? (
@@ -63,14 +74,12 @@ export default async function CollegePage({
                 </div>
               ))}
             </div>
-          </section>
+          </CollegeSection>
         ) : null}
 
-        {/* News & blogs */}
-        <section>
-          <h2 className="mb-3 text-lg font-semibold text-neutral-900">News &amp; blogs</h2>
+        <CollegeSection id="news" title="News & Blogs" icon="news">
           {posts.length === 0 ? (
-            <div className="rounded-md border border-dashed border-neutral-300 bg-white p-8 text-center text-sm text-neutral-500">
+            <div className="rounded-2xl border border-dashed border-neutral-300 bg-white p-8 text-center text-sm text-neutral-500">
               No published posts yet.
             </div>
           ) : (
@@ -82,7 +91,7 @@ export default async function CollegePage({
                 return (
                   <li
                     key={p.id}
-                    className="rounded-lg border border-neutral-200 bg-white p-4"
+                    className="rounded-2xl border border-neutral-200 bg-white p-4"
                   >
                     <div className="text-xs uppercase tracking-wide text-neutral-500">
                       {collegeLabel(p.originCollegeId)} · {p.type}
@@ -106,8 +115,22 @@ export default async function CollegePage({
               })}
             </ul>
           )}
-        </section>
+        </CollegeSection>
+
+        <CollegeSection id="contact" title="Contact" icon="phone">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+              Contact the {college.name}
+            </div>
+            <div className="mt-4 space-y-2 text-sm text-slate-600">
+              {college.contact.email ? <div>{college.contact.email}</div> : null}
+              {college.contact.phone ? <div>{college.contact.phone}</div> : null}
+              {college.contact.address ? <div>{college.contact.address}</div> : null}
+            </div>
+          </div>
+        </CollegeSection>
       </div>
+      <Footer />
     </>
   );
 }

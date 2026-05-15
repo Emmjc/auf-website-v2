@@ -29,18 +29,18 @@ const admissionsLinks = [
 ];
 
 const academicsLinks = [
-  { label: "Graduate School", href: "/academics/graduate-school" },
-  { label: "School of Law", href: "/academics/school-of-law" },
-  { label: "School of Medicine", href: "/academics/school-of-medicine" },
-  { label: "College of Allied Medical Professions", href: "/academics/allied-medical" },
-  { label: "College of Arts and Sciences", href: "/academics/arts-and-sciences" },
-  { label: "College of Business and Accountancy", href: "/academics/business" },
-  { label: "College of Criminal Justice Education", href: "/academics/criminal-justice" },
-  { label: "College of Computer Studies", href: "/academics/computer-studies" },
-  { label: "College of Education", href: "/academics/education" },
-  { label: "College of Engineering and Architecture", href: "/academics/engineering-architecture" },
-  { label: "College of Nursing", href: "/academics/nursing" },
-  { label: "AUF Integrated School", href: "/academics/integrated-school" },
+  { label: "Graduate School", href: "/c/graduate-school" },
+  { label: "School of Law", href: "/c/law" },
+  { label: "School of Medicine", href: "/c/medicine" },
+  { label: "College of Allied Medical Professions", href: "/c/allied-medical-professions" },
+  { label: "College of Arts and Sciences", href: "/c/cas" },
+  { label: "College of Business and Accountancy", href: "/c/business-accountancy" },
+  { label: "College of Criminal Justice Education", href: "/c/criminal-justice" },
+  { label: "College of Computer Studies", href: "/c/computer-studies" },
+  { label: "College of Education", href: "/c/education" },
+  { label: "College of Engineering and Architecture", href: "/c/engineering-architecture" },
+  { label: "College of Nursing", href: "/c/nursing" },
+  { label: "AUF Integrated School", href: "/c/integrated-school" },
 ];
 
 const studentServicesGroups = [

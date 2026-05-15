@@ -93,40 +93,34 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-6 z-20 flex items-center justify-between px-6">
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            aria-label="Previous slide"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white transition hover:bg-white/20"
-            onClick={() => goTo(activeIndex - 1)}
-          >
-            <ChevronLeft className="size-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Next slide"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white transition hover:bg-white/20"
-            onClick={() => goTo(activeIndex + 1)}
-          >
-            <ChevronRight className="size-5" />
-          </button>
+      <button
+        type="button"
+        aria-label="Previous slide"
+        className="absolute left-5 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white backdrop-blur transition hover:bg-white/20"
+        onClick={() => goTo(activeIndex - 1)}
+      >
+        <ChevronLeft className="size-6" />
+      </button>
+      <button
+        type="button"
+        aria-label="Next slide"
+        className="absolute right-5 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white backdrop-blur transition hover:bg-white/20"
+        onClick={() => goTo(activeIndex + 1)}
+      >
+        <ChevronRight className="size-6" />
+      </button>
+
+      <div className="absolute bottom-6 right-6 z-20 flex min-w-[220px] flex-col items-end gap-2 text-white/80">
+        <div className="w-full max-w-[260px]">
+          <div className="h-1 w-full overflow-hidden rounded-full bg-white/20">
+            <div
+              className="h-full rounded-full bg-[#EAD162] transition-all duration-500"
+              style={{ width: `${((activeIndex + 1) / SLIDES.length) * 100}%` }}
+            />
+          </div>
         </div>
-        <div className="flex min-w-[220px] flex-col items-end gap-2 text-white/80">
-          <div className="text-xs font-semibold uppercase tracking-[0.24em]">
-            Slide {activeIndex + 1} of {SLIDES.length}
-          </div>
-          <div className="w-full max-w-[260px]">
-            <div className="h-1 w-full overflow-hidden rounded-full bg-white/20">
-              <div
-                className="h-full rounded-full bg-[#EAD162] transition-all duration-500"
-                style={{ width: `${((activeIndex + 1) / SLIDES.length) * 100}%` }}
-              />
-            </div>
-          </div>
-          <div className="text-sm font-semibold text-white" aria-live="polite">
-            {SLIDES[activeIndex].label}
-          </div>
+        <div className="text-sm font-semibold text-white" aria-live="polite">
+          {SLIDES[activeIndex].label}
         </div>
       </div>
     </section>
