@@ -29,6 +29,127 @@
   },
   "colleges": [
     {
+      "id": "gs",
+      "slug": "graduate-school",
+      "shortName": "GS",
+      "name": "Graduate School",
+      "description": "The Graduate School provides advanced education and professional training, fostering research and innovation for global competitiveness.",
+      "brandColor": "#333333",
+      "accentColor": "#F2C300",
+      "sortOrder": 1,
+      "isActive": true,
+      "dean": {
+        "name": "TBA",
+        "title": "Dean",
+        "photoUrl": null
+      },
+      "contact": {
+        "email": "gs@auf.edu.ph",
+        "phone": null,
+        "address": "Graduate School Building, AUF Campus"
+      },
+      "vision": "To be a leading center for advanced studies and research in the Asia-Pacific region.",
+      "mission": "To advance knowledge and professional practice through high-impact research, innovative teaching, and relevant community engagement.",
+      "programs": []
+    },
+    {
+      "id": "law",
+      "slug": "law",
+      "shortName": "LAW",
+      "name": "School of Law",
+      "description": "The School of Law produces lawyers and legal professionals committed to justice, ethical practice, and the rule of law in service of the Filipino people.",
+      "brandColor": "#5C2A0F",
+      "accentColor": "#F2C300",
+      "sortOrder": 2,
+      "isActive": true,
+      "dean": {
+        "name": "TBA",
+        "title": "Dean",
+        "photoUrl": null
+      },
+      "contact": {
+        "email": "law@auf.edu.ph",
+        "phone": null,
+        "address": "Law Building, AUF Campus"
+      },
+      "vision": "To be a premier law school producing competent, ethical, and socially responsible legal professionals.",
+      "mission": "To develop lawyers and legal professionals with a deep commitment to justice, human dignity, and the common good through rigorous legal education.",
+      "programs": []
+    },
+    {
+      "id": "som",
+      "slug": "medicine",
+      "shortName": "SOM",
+      "name": "School of Medicine",
+      "description": "The School of Medicine shapes compassionate and highly competent physicians dedicated to healthcare excellence and community service.",
+      "brandColor": "#0055A4",
+      "accentColor": "#F2C300",
+      "sortOrder": 3,
+      "isActive": true,
+      "dean": {
+        "name": "TBA",
+        "title": "Dean",
+        "photoUrl": null
+      },
+      "contact": {
+        "email": "som@auf.edu.ph",
+        "phone": null,
+        "address": "Medicine Building, AUF Campus"
+      },
+      "vision": "To be a center of excellence in medical education, producing globally competitive and socially responsive physicians.",
+      "mission": "To provide outstanding medical education, foster impactful research, and deliver compassionate healthcare services.",
+      "programs": []
+    },
+    {
+      "id": "camp",
+      "slug": "allied-medical-professions",
+      "shortName": "CAMP",
+      "name": "College of Allied Medical Professions",
+      "description": "The College of Allied Medical Professions produces competent health professionals dedicated to holistic patient care and wellness promotion.",
+      "brandColor": "#9C1B1B",
+      "accentColor": "#F2C300",
+      "sortOrder": 4,
+      "isActive": true,
+      "dean": {
+        "name": "TBA",
+        "title": "Dean",
+        "photoUrl": null
+      },
+      "contact": {
+        "email": "camp@auf.edu.ph",
+        "phone": null,
+        "address": "Health Sciences Building, AUF Campus"
+      },
+      "vision": "To be a leading institution developing compassionate and Christ-centered allied health professionals.",
+      "mission": "To produce globally competent allied health professionals through excellence in health education, research, and community service.",
+      "programs": [
+        {
+          "id": "camp_pharmacy",
+          "slug": "pharmacy",
+          "name": "Program of Pharmacy",
+          "headName": "TBA",
+          "headTitle": "Program Chair",
+          "contactEmail": null
+        },
+        {
+          "id": "camp_pt",
+          "slug": "physical-therapy",
+          "name": "Program of Physical Therapy",
+          "headName": "TBA",
+          "headTitle": "Program Chair",
+          "contactEmail": null
+        },
+        {
+          "id": "camp_medtech",
+          "slug": "medical-technology",
+          "name": "Program of Medical Technology",
+          "headName": "TBA",
+          "headTitle": "Program Chair",
+          "contactEmail": null
+        }
+      ]
+    },
+    {
       "id": "cas",
       "slug": "cas",
       "shortName": "CAS",
@@ -36,7 +157,7 @@
       "description": "The College of Arts and Sciences provides a broad liberal arts and sciences education, developing well-rounded graduates prepared for leadership in diverse fields.",
       "brandColor": "#7A0019",
       "accentColor": "#F2C300",
-      "sortOrder": 1,
+      "sortOrder": 5,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -55,14 +176,6 @@
           "id": "cas_bio",
           "slug": "biology",
           "name": "Program of Biology",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
-        },
-        {
-          "id": "cas_chem",
-          "slug": "chemistry",
-          "name": "Program of Chemistry",
           "headName": "TBA",
           "headTitle": "Program Chair",
           "contactEmail": null
@@ -87,13 +200,13 @@
     },
     {
       "id": "cba",
-      "slug": "cba",
+      "slug": "business-accountancy",
       "shortName": "CBA",
-      "name": "College of Business Administration",
-      "description": "The College of Business Administration prepares future business leaders with a strong foundation in management, finance, marketing, and entrepreneurship.",
+      "name": "College of Business and Accountancy",
+      "description": "The College of Business and Accountancy prepares future business leaders with a strong foundation in management, finance, marketing, and accounting.",
       "brandColor": "#0B3D91",
       "accentColor": "#F2C300",
-      "sortOrder": 2,
+      "sortOrder": 6,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -135,14 +248,14 @@
       ]
     },
     {
-      "id": "cca",
-      "slug": "cca",
-      "shortName": "CCA",
-      "name": "College of Computing and Architecture",
-      "description": "The College of Computing and Architecture fosters innovation through programs in computer science, information technology, and architecture, preparing graduates for the digital age.",
-      "brandColor": "#0A7D5A",
+      "id": "ccje",
+      "slug": "criminal-justice",
+      "shortName": "CCJE",
+      "name": "College of Criminal Justice Education",
+      "description": "The College of Criminal Justice Education molds disciplined and ethical law enforcers and public safety professionals.",
+      "brandColor": "#4B5320",
       "accentColor": "#F2C300",
-      "sortOrder": 3,
+      "sortOrder": 7,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -150,15 +263,48 @@
         "photoUrl": null
       },
       "contact": {
-        "email": "cca@auf.edu.ph",
+        "email": "ccje@auf.edu.ph",
+        "phone": null,
+        "address": "Criminal Justice Building, AUF Campus"
+      },
+      "vision": "To be a recognized leader in criminal justice education and public safety training.",
+      "mission": "To deliver quality instruction and practical training that form competent, honest, and dedicated criminal justice practitioners.",
+      "programs": [
+        {
+          "id": "ccje_crim",
+          "slug": "criminology",
+          "name": "Program of Criminology",
+          "headName": "TBA",
+          "headTitle": "Program Chair",
+          "contactEmail": null
+        }
+      ]
+    },
+    {
+      "id": "ccs",
+      "slug": "computer-studies",
+      "shortName": "CCS",
+      "name": "College of Computer Studies",
+      "description": "The College of Computer Studies fosters innovation through programs in computer science and information technology, preparing graduates for the digital age.",
+      "brandColor": "#0A7D5A",
+      "accentColor": "#F2C300",
+      "sortOrder": 8,
+      "isActive": true,
+      "dean": {
+        "name": "TBA",
+        "title": "Dean",
+        "photoUrl": null
+      },
+      "contact": {
+        "email": "ccs@auf.edu.ph",
         "phone": null,
         "address": "Technology Building, AUF Campus"
       },
-      "vision": "To be a leading college in computing and architecture, driving innovation and technological advancement in the region.",
-      "mission": "To produce technically excellent, creative, and ethical computing and architecture professionals through rigorous academic programs and industry collaboration.",
+      "vision": "To be a leading college in computing, driving innovation and technological advancement in the region.",
+      "mission": "To produce technically excellent, creative, and ethical computing professionals through rigorous academic programs and industry collaboration.",
       "programs": [
         {
-          "id": "cca_cs",
+          "id": "ccs_cs",
           "slug": "computer-science",
           "name": "Program of Computer Science",
           "headName": "TBA",
@@ -166,17 +312,9 @@
           "contactEmail": null
         },
         {
-          "id": "cca_it",
+          "id": "ccs_it",
           "slug": "information-technology",
           "name": "Program of Information Technology",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
-        },
-        {
-          "id": "cca_arch",
-          "slug": "architecture",
-          "name": "Program of Architecture",
           "headName": "TBA",
           "headTitle": "Program Chair",
           "contactEmail": null
@@ -185,13 +323,13 @@
     },
     {
       "id": "ced",
-      "slug": "ced",
+      "slug": "education",
       "shortName": "CED",
       "name": "College of Education",
       "description": "The College of Education shapes the future of learning by developing passionate, skilled, and values-driven educators committed to transformative teaching.",
       "brandColor": "#A8326E",
       "accentColor": "#F2C300",
-      "sortOrder": 4,
+      "sortOrder": 9,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -225,14 +363,14 @@
       ]
     },
     {
-      "id": "ceng",
-      "slug": "ceng",
-      "shortName": "CENG",
-      "name": "College of Engineering",
-      "description": "The College of Engineering develops skilled engineers who apply scientific and technological knowledge to solve real-world problems with integrity and innovation.",
+      "id": "cea",
+      "slug": "engineering-architecture",
+      "shortName": "CEA",
+      "name": "College of Engineering and Architecture",
+      "description": "The College of Engineering and Architecture develops skilled professionals who apply scientific, technological, and design knowledge to solve real-world problems.",
       "brandColor": "#3B3B3B",
       "accentColor": "#F2C300",
-      "sortOrder": 5,
+      "sortOrder": 10,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -240,15 +378,23 @@
         "photoUrl": null
       },
       "contact": {
-        "email": "ceng@auf.edu.ph",
+        "email": "cea@auf.edu.ph",
         "phone": null,
-        "address": "Engineering Building, AUF Campus"
+        "address": "Engineering and Architecture Building, AUF Campus"
       },
-      "vision": "To be a premier engineering college producing globally competitive, innovative, and ethically responsible engineers.",
-      "mission": "To provide quality engineering education that integrates technical excellence, research, and social responsibility.",
+      "vision": "To be a premier college producing globally competitive, innovative, and ethically responsible engineers and architects.",
+      "mission": "To provide quality education that integrates technical excellence, design thinking, research, and social responsibility.",
       "programs": [
         {
-          "id": "ceng_ce",
+          "id": "cea_arch",
+          "slug": "architecture",
+          "name": "Program of Architecture",
+          "headName": "TBA",
+          "headTitle": "Program Chair",
+          "contactEmail": null
+        },
+        {
+          "id": "cea_ce",
           "slug": "civil-engineering",
           "name": "Program of Civil Engineering",
           "headName": "TBA",
@@ -256,7 +402,7 @@
           "contactEmail": null
         },
         {
-          "id": "ceng_ece",
+          "id": "cea_ece",
           "slug": "electronics-engineering",
           "name": "Program of Electronics Engineering",
           "headName": "TBA",
@@ -264,32 +410,24 @@
           "contactEmail": null
         },
         {
-          "id": "ceng_me",
+          "id": "cea_me",
           "slug": "mechanical-engineering",
           "name": "Program of Mechanical Engineering",
           "headName": "TBA",
           "headTitle": "Program Chair",
           "contactEmail": null
-        },
-        {
-          "id": "ceng_ie",
-          "slug": "industrial-engineering",
-          "name": "Program of Industrial Engineering",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
         }
       ]
     },
     {
-      "id": "chs",
-      "slug": "chs",
-      "shortName": "CHS",
-      "name": "College of Health Sciences",
-      "description": "The College of Health Sciences produces competent and compassionate health professionals dedicated to promoting wellness and serving communities.",
-      "brandColor": "#9C1B1B",
-      "accentColor": "#F2C300",
-      "sortOrder": 6,
+      "id": "con",
+      "slug": "nursing",
+      "shortName": "CON",
+      "name": "College of Nursing",
+      "description": "The College of Nursing produces exceptional nursing professionals equipped with the clinical skills, empathy, and leadership needed in modern healthcare.",
+      "brandColor": "#E6A817",
+      "accentColor": "#7A0019",
+      "sortOrder": 11,
       "isActive": true,
       "dean": {
         "name": "TBA",
@@ -297,111 +435,71 @@
         "photoUrl": null
       },
       "contact": {
-        "email": "chs@auf.edu.ph",
+        "email": "con@auf.edu.ph",
         "phone": null,
-        "address": "Health Sciences Building, AUF Campus"
+        "address": "Nursing Building, AUF Campus"
       },
-      "vision": "To be a leading health sciences institution developing compassionate, competent, and Christ-centered health professionals.",
-      "mission": "To produce globally competent health professionals through excellence in health education, research, and community service.",
+      "vision": "To be a world-class institution for nursing education producing culturally-competent and compassionate nurses.",
+      "mission": "To deliver excellence in nursing education through evidence-based practice, rigorous clinical training, and holistic care principles.",
       "programs": [
         {
-          "id": "chs_nursing",
+          "id": "con_nursing",
           "slug": "nursing",
           "name": "Program of Nursing",
           "headName": "TBA",
           "headTitle": "Program Chair",
           "contactEmail": null
-        },
-        {
-          "id": "chs_pharmacy",
-          "slug": "pharmacy",
-          "name": "Program of Pharmacy",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
-        },
-        {
-          "id": "chs_pt",
-          "slug": "physical-therapy",
-          "name": "Program of Physical Therapy",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
-        },
-        {
-          "id": "chs_medtech",
-          "slug": "medical-technology",
-          "name": "Program of Medical Technology",
-          "headName": "TBA",
-          "headTitle": "Program Chair",
-          "contactEmail": null
         }
       ]
     },
     {
-      "id": "csm",
-      "slug": "csm",
-      "shortName": "CSM",
-      "name": "College of Science and Mathematics",
-      "description": "The College of Science and Mathematics cultivates analytical minds and scientific literacy through rigorous programs in pure and applied sciences.",
-      "brandColor": "#1F6FB2",
+      "id": "is",
+      "slug": "integrated-school",
+      "shortName": "IS",
+      "name": "AUF Integrated School",
+      "description": "The AUF Integrated School provides foundational education deeply rooted in Catholic values, preparing students for higher education and lifelong learning.",
+      "brandColor": "#002F6C",
       "accentColor": "#F2C300",
-      "sortOrder": 7,
+      "sortOrder": 12,
       "isActive": true,
       "dean": {
         "name": "TBA",
-        "title": "Dean",
+        "title": "Principal",
         "photoUrl": null
       },
       "contact": {
-        "email": "csm@auf.edu.ph",
+        "email": "is@auf.edu.ph",
         "phone": null,
-        "address": "Science Building, AUF Campus"
+        "address": "Integrated School Building, AUF Campus"
       },
-      "vision": "To be a center of scientific excellence nurturing critical thinkers and researchers who advance knowledge and contribute to national development.",
-      "mission": "To provide a strong foundation in science and mathematics through quality instruction, meaningful research, and active community engagement.",
+      "vision": "To be a model Catholic basic education institution shaping young minds to be academically excellent and morally upright.",
+      "mission": "To foster the holistic development of learners through a robust curriculum, dynamic learning environments, and strong spiritual formation.",
       "programs": [
         {
-          "id": "csm_math",
-          "slug": "mathematics",
-          "name": "Program of Mathematics",
+          "id": "is_elem",
+          "slug": "elementary",
+          "name": "Elementary Department",
           "headName": "TBA",
-          "headTitle": "Program Chair",
+          "headTitle": "Coordinator",
           "contactEmail": null
         },
         {
-          "id": "csm_physics",
-          "slug": "physics",
-          "name": "Program of Physics",
+          "id": "is_jhs",
+          "slug": "junior-high-school",
+          "name": "Junior High School",
           "headName": "TBA",
-          "headTitle": "Program Chair",
+          "headTitle": "Coordinator",
+          "contactEmail": null
+        },
+        {
+          "id": "is_shs",
+          "slug": "senior-high-school",
+          "name": "Senior High School",
+          "headName": "TBA",
+          "headTitle": "Coordinator",
           "contactEmail": null
         }
       ]
-    },
-    {
-      "id": "law",
-      "slug": "law",
-      "shortName": "LAW",
-      "name": "School of Law",
-      "description": "The School of Law produces lawyers and legal professionals committed to justice, ethical practice, and the rule of law in service of the Filipino people.",
-      "brandColor": "#5C2A0F",
-      "accentColor": "#F2C300",
-      "sortOrder": 8,
-      "isActive": true,
-      "dean": {
-        "name": "TBA",
-        "title": "Dean",
-        "photoUrl": null
-      },
-      "contact": {
-        "email": "law@auf.edu.ph",
-        "phone": null,
-        "address": "Law Building, AUF Campus"
-      },
-      "vision": "To be a premier law school producing competent, ethical, and socially responsible legal professionals.",
-      "mission": "To develop lawyers and legal professionals with a deep commitment to justice, human dignity, and the common good through rigorous legal education.",
-      "programs": []
     }
   ]
 }

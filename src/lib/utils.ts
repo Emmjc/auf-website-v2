@@ -1,20 +1,25 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-import slugify from "slugify";
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 
-export function toSlug(input: string): string {
-  return slugify(input, { lower: true, strict: true, trim: true });
-}
-
-export function formatDate(d: Date | string, locale = "en-PH") {
-  const date = typeof d === "string" ? new Date(d) : d;
-  return new Intl.DateTimeFormat(locale, {
+export function formatDate(value: string | number | Date) {
+  const date = typeof value === "string" || typeof value === "number" ? new Date(value) : value
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "2-digit",
     year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(date);
+  }).format(date)
+}
+
+export function toSlug(value: string) {
+  return value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "")
 }
