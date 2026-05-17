@@ -1,4 +1,5 @@
-import { Role, PostStatus } from "@/server/prisma/enums";
+import { Role } from "@/server/prisma/enums";
+import { PostStatus } from "@prisma/client";
 import { isValidCollegeId } from "@/data/colleges";
 
 export type Actor = {
