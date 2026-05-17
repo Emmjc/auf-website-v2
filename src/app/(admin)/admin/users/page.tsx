@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { requireAdminPage } from "@/server/auth/session";
 import { listUsers } from "@/server/services/users";
 import { activeColleges, getCollegeById } from "@/data/colleges";

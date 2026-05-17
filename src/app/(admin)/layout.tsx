@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { auth } from "@/server/auth/auth";
 import { signOutAction } from "@/server/actions/auth";
 import { Badge } from "@/components/ui/primitives";

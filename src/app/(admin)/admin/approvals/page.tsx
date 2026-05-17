@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { requireAdminPage } from "@/server/auth/session";
 import { listPendingReviews } from "@/server/services/posts";
 import { collegeLabel } from "@/data/colleges";

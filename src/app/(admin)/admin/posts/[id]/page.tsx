@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { PostStatus } from "@prisma/client";
+import { PostStatus } from "@/server/prisma/enums";
 import { prisma } from "@/lib/prisma";
 import { requireAdminPage, ForbiddenError } from "@/server/auth/session";
 import {

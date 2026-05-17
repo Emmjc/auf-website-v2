@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { PostStatus } from "@prisma/client";
+import { PostStatus } from "@/server/prisma/enums";
 import {
   submitPostForReviewAction,
   reviewPostAction,

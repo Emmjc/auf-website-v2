@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { inviteUserAction } from "@/server/actions/users";
 import {
   Alert,

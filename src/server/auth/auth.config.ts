@@ -1,6 +1,6 @@
 import type { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { isGoogleSsoEnabled, env } from "@/lib/env";
 
 // Edge-safe Auth.js config (no DB / no bcrypt).

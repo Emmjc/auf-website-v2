@@ -1,4 +1,4 @@
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { requireAdminPage } from "@/server/auth/session";
 import { activeColleges } from "@/data/colleges";
 import { PageHeader, Card } from "@/components/ui/primitives";

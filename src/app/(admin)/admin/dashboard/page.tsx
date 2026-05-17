@@ -1,4 +1,4 @@
-import { Role, PostStatus } from "@prisma/client";
+import { Role, PostStatus } from "@/server/prisma/enums";
 import { requireAdminPage } from "@/server/auth/session";
 import { prisma } from "@/lib/prisma";
 import { activeColleges, collegeLabel } from "@/data/colleges";

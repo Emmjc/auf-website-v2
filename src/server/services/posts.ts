@@ -1,10 +1,6 @@
 import { prisma } from "@/lib/prisma";
-import {
-  ApprovalAction,
-  PostStatus,
-  Role,
-  type Prisma,
-} from "@prisma/client";
+import { type Prisma } from "@prisma/client";
+import { ApprovalAction, PostStatus, Role } from "@/server/prisma/enums";
 import {
   allowedNextStatuses,
   canApprovePosts,

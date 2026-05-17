@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PostType } from "@prisma/client";
+import { PostType } from "@/server/prisma/enums";
 
 // Tiptap JSON document — accepted as opaque JSON; we mirror plain text separately.
 const tiptapDoc = z.record(z.string(), z.unknown());

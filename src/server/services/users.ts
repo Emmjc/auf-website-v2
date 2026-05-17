@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { Role } from "@prisma/client";
+import { Role } from "@/server/prisma/enums";
 import { prisma } from "@/lib/prisma";
 import { canManageUsers, type Actor } from "@/lib/rbac/permissions";
 import { isValidCollegeId } from "@/data/colleges";
