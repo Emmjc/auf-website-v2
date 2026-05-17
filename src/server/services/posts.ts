@@ -68,7 +68,18 @@ export async function getPostForView(args: {
     where: {
       slug: args.slug,
       status: PostStatus.PUBLISHED,
-      originCollegeId: args.collegeId,
+      // When viewing from a college context, accept posts that either
+      // originated from that college OR are tagged to it (e.g. a university
+      // post that OUR tagged to a college).
+      // When viewing from the university scope (null), require origin = null.
+      ...(args.collegeId !== null
+        ? {
+            OR: [
+              { originCollegeId: args.collegeId },
+              { collegeTags: { some: { collegeId: args.collegeId } } },
+            ],
+          }
+        : { originCollegeId: null }),
     },
     include: {
       author: { select: { name: true, image: true } },

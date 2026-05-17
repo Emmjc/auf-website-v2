@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCollegeBySlug, collegeLabel } from "@/data/colleges";
+import { getCollegeById, getCollegeBySlug, collegeLabel } from "@/data/colleges";
 import { listPublishedPostsForCollege } from "@/server/services/posts";
 import { formatDate } from "@/lib/utils";
 import CollegeHero from "@/components/public/college/CollegeHero";
@@ -157,8 +157,11 @@ export default async function AlliedMedicalProfessionsPage() {
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {posts.map((p) => {
+                  const originCollege = p.originCollegeId
+                    ? getCollegeById(p.originCollegeId)
+                    : null;
                   const href = p.originCollegeId
-                    ? `/c/${p.originCollegeId}/posts/${p.slug}`
+                    ? `/c/${originCollege?.slug ?? p.originCollegeId}/posts/${p.slug}`
                     : `/posts/${p.slug}`;
                   return (
                     <li
