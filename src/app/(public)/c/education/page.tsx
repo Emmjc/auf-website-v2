@@ -145,6 +145,7 @@ export default async function CollegeOfEducationPage() {
   const posts = await listPublishedPostsForCollege(college.id, { limit: 12 });
 
   const navItems: { id: string; label: string; icon: CollegeNavIcon }[] = [
+    { id: "news", label: "News", icon: "news" },
     { id: "overview", label: "Overview", icon: "book" },
     { id: "history", label: "History", icon: "scroll" },
     { id: "vision", label: "Vision", icon: "target" },
@@ -154,7 +155,6 @@ export default async function CollegeOfEducationPage() {
     { id: "affiliations", label: "Affiliations", icon: "news" },
     { id: "topnotchers", label: "Topnotchers", icon: "news" },
     { id: "facilities", label: "Facilities", icon: "calendar" },
-    { id: "news", label: "News", icon: "news" },
     { id: "contact", label: "Contact", icon: "phone" },
   ];
 
@@ -171,6 +171,47 @@ export default async function CollegeOfEducationPage() {
       <CollegeSubnav items={navItems} brandColor={college.brandColor} />
 
       <div className="mx-auto max-w-6xl px-6 py-12">
+        <CollegeSection id="news" title="News & Blogs" icon="news">
+          <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
+            {posts.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-neutral-300 bg-white p-8 text-center text-sm text-neutral-500">
+                No published posts yet.
+              </div>
+            ) : (
+              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {posts.map((p) => {
+                  const href = p.originCollegeId
+                    ? `/c/${p.originCollegeId}/posts/${p.slug}`
+                    : `/posts/${p.slug}`;
+                  return (
+                    <li
+                      key={p.id}
+                      className="rounded-2xl border border-neutral-200 bg-white p-4"
+                    >
+                      <div className="text-xs uppercase tracking-wide text-neutral-500">
+                        {collegeLabel(p.originCollegeId)} · {p.type}
+                      </div>
+                      <Link
+                        href={href}
+                        className="mt-1 block text-base font-semibold text-neutral-900 hover:underline"
+                      >
+                        {p.title}
+                      </Link>
+                      {p.excerpt ? (
+                        <p className="mt-1 line-clamp-3 text-sm text-neutral-600">
+                          {p.excerpt}
+                        </p>
+                      ) : null}
+                      <div className="mt-3 text-xs text-neutral-500">
+                        {p.publishedAt ? formatDate(p.publishedAt) : ""} · {p.author.name}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        </CollegeSection>
         <CollegeSection
           id="overview"
           title="CED Overview"
@@ -379,46 +420,6 @@ export default async function CollegeOfEducationPage() {
               student development.
             </p>
           </div>
-        </CollegeSection>
-
-        <CollegeSection id="news" title="News & Blogs" icon="news">
-          {posts.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-neutral-300 bg-white p-8 text-center text-sm text-neutral-500">
-              No published posts yet.
-            </div>
-          ) : (
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {posts.map((p) => {
-                const href = p.originCollegeId
-                  ? `/c/${p.originCollegeId}/posts/${p.slug}`
-                  : `/posts/${p.slug}`;
-                return (
-                  <li
-                    key={p.id}
-                    className="rounded-2xl border border-neutral-200 bg-white p-4"
-                  >
-                    <div className="text-xs uppercase tracking-wide text-neutral-500">
-                      {collegeLabel(p.originCollegeId)} · {p.type}
-                    </div>
-                    <Link
-                      href={href}
-                      className="mt-1 block text-base font-semibold text-neutral-900 hover:underline"
-                    >
-                      {p.title}
-                    </Link>
-                    {p.excerpt ? (
-                      <p className="mt-1 line-clamp-3 text-sm text-neutral-600">
-                        {p.excerpt}
-                      </p>
-                    ) : null}
-                    <div className="mt-3 text-xs text-neutral-500">
-                      {p.publishedAt ? formatDate(p.publishedAt) : ""} · {p.author.name}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
         </CollegeSection>
 
         <CollegeSection id="contact" title="Contact" icon="phone">

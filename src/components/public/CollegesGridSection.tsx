@@ -31,7 +31,7 @@ export default function CollegesGridSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-[#173a8f]">
+    <section id="academics" className="relative overflow-hidden bg-[#173a8f]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_60%)]" />
       <div className="relative mx-auto max-w-6xl px-6 py-16 text-white">
         <div className="flex flex-wrap items-end justify-between gap-6">

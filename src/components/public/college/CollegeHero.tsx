@@ -43,7 +43,9 @@ export default function CollegeHero({
                 Admissions Guide
               </Link>
               <Link
-                href="/apply"
+                href="https://sblive.auf.edu.ph/schoolautomate/PARENTS_STUDENTS/parents_student_index.jsp"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-white/60 px-5 py-2 text-sm font-semibold text-white"
               >
                 Apply Now

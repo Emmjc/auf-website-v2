@@ -2,24 +2,25 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SLIDES = [
-  { src: "/images/slider/is.jpg", label: "Institute of Science" },
-  { src: "/images/slider/lib.jpg", label: "Library" },
-  { src: "/images/slider/mainc.jpg", label: "Main Campus" },
-  { src: "/images/slider/mainc2.jpg", label: "Main Campus" },
-  { src: "/images/slider/ps.jpg", label: "Performing Space" },
-  { src: "/images/slider/ps2.png", label: "Performing Space" },
-  { src: "/images/slider/quad.jpg", label: "Quadrangle" },
-  { src: "/images/slider/scc.png", label: "Student Center" },
-  { src: "/images/slider/abldg.jpg", label: "Academic Building" },
-  { src: "/images/slider/is2.jpg", label: "Institute of Science" },
-  { src: "/images/slider/is3.jpg", label: "Institute of Science" },
-  { src: "/images/slider/eya.jpg", label: "Education Annex" },
-  { src: "/images/slider/eya2.jpg", label: "Education Annex" },
-  { src: "/images/slider/quad2.jpg", label: "Quadrangle" },
+  { src: "/images/slider/is.jpg", label: "AUF Integrated School" },
+  { src: "/images/slider/lib.jpg", label: "AUF Main Campus Lourdes Hall" },
+  { src: "/images/slider/mainc.jpg", label: "AUF Main Campus" },
+  { src: "/images/slider/mainc2.jpg", label: "AUF Main Campus" },
+  { src: "/images/slider/ps.jpg", label: "AUF Professional School Building" },
+  { src: "/images/slider/ps2.png", label: "AUF Professional School Building" },
+  { src: "/images/slider/quad.jpg", label: "AUF Main Campus Quadrangle" },
+  { src: "/images/slider/scc.png", label: "AUF Sports and Cultural Center Building" },
+  { src: "/images/slider/abldg.jpg", label: "AUF Main Campus" },
+  { src: "/images/slider/is2.jpg", label: "AUF Integrated School" },
+  { src: "/images/slider/is3.jpg", label: "AUF Integrated School" },
+  { src: "/images/slider/eya.jpg", label: "AUF Emmauel Y. Angeles-CLI Building" },
+  { src: "/images/slider/eya2.jpg", label: "AUF Emmauel Y. Angeles-CLI Building" },
+  { src: "/images/slider/quad2.jpg", label: "AUF Main Campus Quadrangle" },
 ];
 
 const AUTO_INTERVAL = 6000;
@@ -83,12 +84,18 @@ export default function HeroSlider() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="rounded-full bg-[#EAD162] px-5 py-2 text-sm font-semibold text-[#1c2d66] shadow-sm transition hover:bg-[#d9bf52]">
+            <Link
+              href="/#academics"
+              className="rounded-full bg-[#EAD162] px-5 py-2 text-sm font-semibold text-[#1c2d66] shadow-sm transition hover:bg-[#d9bf52]"
+            >
               Explore Programs
-            </button>
-            <button className="rounded-full border border-white/60 px-5 py-2 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10">
+            </Link>
+            <Link
+              href="/connect/campuses"
+              className="rounded-full border border-white/60 px-5 py-2 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+            >
               Visit the Campus
-            </button>
+            </Link>
           </div>
         </div>
       </div>

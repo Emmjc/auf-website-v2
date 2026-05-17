@@ -329,7 +329,9 @@ export default function Navbar() {
           </NavigationMenu>
 
           <Link
-            href="/apply"
+            href="https://sblive.auf.edu.ph/schoolautomate/PARENTS_STUDENTS/parents_student_index.jsp"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex min-w-[112px] items-center justify-center rounded-full border border-[#27409E] px-4 py-2 text-sm font-semibold text-[#27409E] transition hover:bg-[#27409E] hover:text-white whitespace-nowrap"
           >
             Apply Now
@@ -386,7 +388,9 @@ export default function Navbar() {
               </MobileAccordion>
 
               <Link
-                href="/apply"
+                href="https://sblive.auf.edu.ph/schoolautomate/PARENTS_STUDENTS/parents_student_index.jsp"
+                target="_blank"
+                rel="noreferrer"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-full border border-[#27409E] px-4 py-3 text-sm font-semibold text-[#27409E] transition hover:bg-[#27409E] hover:text-white whitespace-nowrap"
               >
                 Apply Now
